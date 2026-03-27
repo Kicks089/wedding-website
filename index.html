@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maximiliane & Stefan · 5. September 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Great+Vibes&family=Marcellus+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-monogram">M <span class="nav-amp">&</span> S</span>
+      <ul class="nav-links">
+        <li><a href="#hochzeit">Die Hochzeit</a></li>
+        <li><a href="#rsvp" class="nav-cta">Zusagen</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links-mobile" id="nav-mobile">
+      <li><a href="#hochzeit">Die Hochzeit</a></li>
+      <li><a href="#rsvp">Zusagen</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-pre">Einladung zur Hochzeit</p>
+      <div class="hero-monogram">
+        <div class="hero-ghost-amp">&amp;</div>
+        <div class="hero-names">
+          <span class="hero-name">Maximiliane</span>
+          <span class="hero-name">Stefan</span>
+        </div>
+      </div>
+      <div class="hero-divider"></div>
+      <p class="hero-date">05 &ndash; Sep &ndash; 26</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-unit">
+          <span id="days">--</span>
+          <small>Tage</small>
+        </div>
+        <div class="countdown-sep">·</div>
+        <div class="countdown-unit">
+          <span id="hours">--</span>
+          <small>Stunden</small>
+        </div>
+        <div class="countdown-sep">·</div>
+        <div class="countdown-unit">
+          <span id="minutes">--</span>
+          <small>Minuten</small>
+        </div>
+      </div>
+      <a href="#rsvp" class="btn-primary">Jetzt zusagen</a>
+    </div>
+    <div class="hero-scroll-hint">↓</div>
+  </section>
+
+  <!-- HOCHZEIT -->
+  <section id="hochzeit" class="section section-cream">
+    <div class="section-inner">
+      <div class="wir-sagen-ja-mono">
+        <span class="wsj-m">M</span>
+        <span class="wsj-amp">&amp;</span>
+        <span class="wsj-s">S</span>
+      </div>
+      <span class="section-label">5. September 2026</span>
+      <h2 class="wir-sagen-ja">Wir sagen Ja</h2>
+      <p class="section-sub">Wir freuen uns, diesen Tag mit euch zu feiern.</p>
+      <div class="event-cards">
+        <div class="event-card">
+          <div class="event-icon">⛪</div>
+          <h3>Trauung</h3>
+          <p class="event-time">13:00 Uhr</p>
+          <p class="event-location">Pfarrkirche St. Ursula<br>Pellheim</p>
+        </div>
+        <div class="event-divider"></div>
+        <div class="event-card">
+          <div class="event-icon">🥂</div>
+          <h3>Feier</h3>
+          <p class="event-time">Ab 13:00 Uhr</p>
+          <p class="event-location">Gasthof Weißenbeck<br>Bergkirchen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="section section-cream-panel">
+    <div class="story-inner">
+      <div class="story-text">
+        <div class="story-names">
+          <span class="story-ghost-amp">&amp;</span>
+          <p class="story-name-line">Maximiliane</p>
+          <p class="story-name-line story-name-line-right">Stefan</p>
+        </div>
+        <p class="story-poem">Seite an Seite.<br>Herz an Herz.<br>Für immer.</p>
+      </div>
+      <div class="story-photo">
+        <img src="images/couple-olympiapark-winter.jpg" alt="Maximiliane & Stefan" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" class="section section-white">
+    <div class="section-inner section-narrow">
+      <span class="section-label">Anmeldung</span>
+      <h2>Bist du dabei?</h2>
+      <p class="section-sub" id="rsvp-intro">Wir bitten um eure Rückmeldung bis zum <strong>1. Juli 2026</strong>.</p>
+
+      <form id="rsvp-form" novalidate>
+        <div class="form-group">
+          <label for="guest-name">Dein Name</label>
+          <input type="text" id="guest-name" name="name" placeholder="Vor- und Nachname" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label>Ich komme …</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="attending" value="yes" required>
+              <span class="radio-custom"></span>
+              Ja, ich bin dabei! 🎉
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="attending" value="no">
+              <span class="radio-custom"></span>
+              Leider kann ich nicht kommen
+            </label>
+          </div>
+        </div>
+
+        <div id="attending-fields" class="attending-fields hidden">
+          <div class="form-group">
+            <label for="menu">Menüwahl</label>
+            <select id="menu" name="menu" required>
+              <option value="">Bitte wählen …</option>
+              <option value="fleisch">Fleisch</option>
+              <option value="fisch">Fisch</option>
+              <option value="vegetarisch">Vegetarisch</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Unverträglichkeiten & Anmerkungen</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="z.B. Laktoseintoleranz, glutenfrei, Allergien …"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full">Absenden</button>
+        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- TRAUTZEUGEN -->
+  <section id="trautzeugen" class="section section-green">
+    <div class="section-inner">
+      <span class="section-label section-label-light">Unser Team</span>
+      <h2 class="text-light">Trauzeugen</h2>
+      <p class="section-sub text-light-muted">Die Menschen, die uns an diesem Tag begleiten</p>
+      <div class="witness-cards">
+        <div class="witness-card">
+          <div class="witness-avatar">
+            <div class="witness-initial">J</div>
+          </div>
+          <h3>Julian Blass</h3>
+          <p class="witness-role">Trauzeuge · Stefan</p>
+          <p class="witness-phone"><a href="tel:+4915788060922">+49 157 8806 0922</a></p>
+        </div>
+        <div class="witness-card">
+          <div class="witness-avatar">
+            <div class="witness-initial">V</div>
+          </div>
+          <h3>Victoria Mittermair</h3>
+          <p class="witness-role">Trauzeugin · Maximiliane</p>
+          <p class="witness-phone"><a href="tel:+4915734625473">+49 157 3462 5473</a></p>
+        </div>
+        <div class="witness-card">
+          <div class="witness-avatar">
+            <div class="witness-initial">E</div>
+          </div>
+          <h3>Erin Quinn</h3>
+          <p class="witness-role">Trauzeugin · Maximiliane</p>
+          <p class="witness-phone"><a href="tel:+16504709752">+1 650 470 9752</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANFAHRT -->
+  <section id="anfahrt" class="section section-cream">
+    <div class="section-inner">
+      <span class="section-label">Wie ihr zu uns findet</span>
+      <h2>Anfahrt</h2>
+      <div class="maps-grid">
+        <div class="map-item">
+          <h3>Trauung · St. Ursula Kirche</h3>
+          <p class="map-address">Pellheim · 85221 Dachau</p>
+          <div class="map-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=Kirche+Pellheim+85221+Dachau+Bayern&output=embed"
+              width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="St. Ursula Kirche Pellheim">
+            </iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/Kirche+Pellheim+85221+Dachau+Bayern" target="_blank" class="btn-secondary">In Google Maps öffnen</a>
+        </div>
+        <div class="map-item">
+          <h3>Feier · Gasthof Weissenbeck</h3>
+          <p class="map-address">Bergkirchen · Bayern</p>
+          <div class="map-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=Gasthof+Weißenbeck+Bergkirchen+Bayern+Deutschland&output=embed"
+              width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Gasthof Weissenbeck Unterbachern">
+            </iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/Gasthof+Weißenbeck+Bergkirchen+Bayern" target="_blank" class="btn-secondary">In Google Maps öffnen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section-white">
+    <div class="section-inner section-narrow">
+      <span class="section-label">Ihr fragt, wir antworten</span>
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Dresscode?</summary>
+          <p>Festlich elegant. Wir freuen uns über Kleider und Anzüge — gerne in warmen, herbstlichen Farben oder klassischem Schwarz. Wer Grüntöne trägt, passt zum Anlass.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Wo kann ich parken?</summary>
+          <p>Am Gasthof Weissenbeck stehen ausreichend Parkplätze zur Verfügung. Wir empfehlen außerdem, Fahrgemeinschaften zu bilden.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kinder?</summary>
+          <p>Kinder sind bei uns herzlich willkommen! Wenn ihr euren Kleinen mitbringt, gebt das bitte kurz in den Anmerkungen beim RSVP an, damit wir gut planen können.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Geschenke?</summary>
+          <p>Eure Anwesenheit ist das schönste Geschenk. Wer uns dennoch eine Freude machen möchte, kann uns gerne mit einem Beitrag zur Hochzeitsreise unterstützen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Bis wann muss ich mich anmelden?</summary>
+          <p>Wir bitten um eure Rückmeldung bis zum <strong>1. Juli 2026</strong>, damit wir planen können.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Übernachtungsmöglichkeiten in der Nähe?</summary>
+          <p>In Dachau (ca. 5–10 km entfernt) gibt es mehrere gute Hotels. Auch Airbnbs in der Umgebung von Unterbachern und Dachau sind eine gute Option. Da der 5. September auf ein Wochenende fällt, empfehlen wir, frühzeitig zu buchen.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="section section-cream">
+    <div class="section-inner">
+      <span class="section-label">Erinnerungen</span>
+      <h2>Galerie</h2>
+      <div id="gallery-empty" class="gallery-placeholder">
+        <div class="gallery-placeholder-icon">📷</div>
+        <p>Hier erscheinen nach der Hochzeit eure Lieblingsfotos.</p>
+        <p class="gallery-placeholder-sub">Schaut bald wieder vorbei.</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div id="drive-link-container" class="drive-link-wrap" style="display:none">
+        <a href="#" id="drive-link" class="btn-secondary" target="_blank" rel="noopener">
+          Alle Fotos im Google Drive ansehen →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-names">Maximiliane & Stefan</p>
+    <p class="footer-date">5. September 2026 · Pellheim</p>
+    <p class="footer-love">Mit Liebe gemacht 💚</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
