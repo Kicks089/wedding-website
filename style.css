@@ -182,7 +182,7 @@ em {
   inset: 0;
   background:
     linear-gradient(160deg, rgba(45,58,48,0.82) 0%, rgba(61,80,68,0.72) 55%, rgba(45,58,48,0.88) 100%),
-    url('images/hero-couple.jpg') center/cover no-repeat;
+    url('images/hero-img4113.jpg') center/cover no-repeat;
 }
 
 .hero-content {
@@ -890,7 +890,7 @@ footer {
 .story-poem {
   font-family: var(--font-script);
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-dark);
+  color: var(--green-dark);
   line-height: 1.5;
 }
 
