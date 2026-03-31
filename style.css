@@ -921,6 +921,15 @@ footer {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 
+  .hero-names {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
   .event-cards {
     flex-direction: column;
     gap: 20px;
@@ -944,7 +953,7 @@ footer {
 
   .section-sub { margin-bottom: 40px; }
 
-
+  .rsvp-note { margin-top: -24px; }
 }
 
 @media (max-width: 480px) {
