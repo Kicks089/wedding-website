@@ -92,12 +92,8 @@ const GUESTS = {
   '2e8057': { name: 'Joachim Franz' },
 };
 
-// Local images for gallery
-const GALLERY_IMAGES = [
-  'images/couple-lake-terrace.jpg',
-  'images/couple-garden-summer.jpg',
-  'images/couple-munich-night.jpg',
-];
+// Local images for gallery — leave empty until after the wedding
+const GALLERY_IMAGES = [];
 // ──────────────────────────────────────────────
 
 
@@ -147,8 +143,17 @@ const guest   = guestId ? GUESTS[guestId] : null;
 
 if (guest) {
   document.getElementById('guest-name').value = guest.name;
-  document.getElementById('rsvp-intro').innerHTML =
-    `Hallo <strong>${guest.name}</strong>! Wir freuen uns auf deine Rückmeldung bis zum <strong>1. Juli 2026</strong>.`;
+  const intro = document.getElementById('rsvp-intro');
+  intro.textContent = '';
+  const hallo = document.createElement('span');
+  hallo.textContent = 'Hallo ';
+  const nameEl = document.createElement('strong');
+  nameEl.textContent = guest.name;
+  const rest = document.createTextNode('! Wir freuen uns auf deine Rückmeldung bis zum ');
+  const deadline = document.createElement('strong');
+  deadline.textContent = '31. Juli 2026';
+  const dot = document.createTextNode('.');
+  intro.append(hallo, nameEl, rest, deadline, dot);
 }
 
 
@@ -203,14 +208,16 @@ form.addEventListener('submit', async (e) => {
   }
 
   try {
-    await fetch(APPS_SCRIPT_URL, {
+    const res = await fetch(APPS_SCRIPT_URL, {
       method: 'POST',
-      mode:   'no-cors',
       body:   JSON.stringify(payload),
-      headers: { 'Content-Type': 'application/json' },
     });
 
-    feedback.textContent = 'Danke! Wir freuen uns auf dich.';
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    feedback.textContent = attendingVal.value === 'yes'
+      ? 'Danke! Wir freuen uns auf dich.'
+      : 'Schade, dass du nicht kommen kannst. Danke für deine Rückmeldung!';
     feedback.classList.add('success');
     form.reset();
     attendingFields.classList.add('hidden');
