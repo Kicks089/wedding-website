@@ -117,7 +117,7 @@ mobileMenu.querySelectorAll('a').forEach(a => {
 
 // ─── COUNTDOWN ────────────────────────────────
 function updateCountdown() {
-  const wedding = new Date('2026-09-05T11:00:00');
+  const wedding = new Date('2026-09-05T13:00:00');
   const now     = new Date();
   const diff    = wedding - now;
 
