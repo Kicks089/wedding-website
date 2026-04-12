@@ -151,7 +151,7 @@ if (guest) {
   nameEl.textContent = guest.name;
   const rest = document.createTextNode('! Wir freuen uns auf deine Rückmeldung bis zum ');
   const deadline = document.createElement('strong');
-  deadline.textContent = '31. Juli 2026';
+  deadline.textContent = '5. Juni 2026';
   const dot = document.createTextNode('.');
   intro.append(hallo, nameEl, rest, deadline, dot);
 }
