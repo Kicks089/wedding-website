@@ -196,6 +196,7 @@ form.addEventListener('submit', async (e) => {
     attending:  attendingVal.value,
     menu:       attendingVal.value === 'yes' ? document.getElementById('menu').value : '',
     notes:      document.getElementById('notes').value.trim(),
+    isChild:    document.getElementById('is-child').checked ? 'ja' : 'nein',
   };
 
   if (APPS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') {
