@@ -7,7 +7,7 @@
 const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxiOxs2yQ5zXzP9QDRrES1AxsuJWjLMm45L5w1i9l036z-EuMojxoiseBqQSjBsIP6X/exec';
 
 // Google Drive — BildaFotograf subfolder link
-const DRIVE_LINK = 'https://drive.google.com/drive/folders/10aNn17LKg2J8-Z7jytSeMPOAlZBXLaVu';
+const DRIVE_LINK = 'https://drive.google.com/drive/folders/1X3-NXojSglKrisRteMv7tHWT2BKmmwf5?usp=drive_link';
 
 // Guest list — generated from your Google Sheet
 // Format: 'uniqueId': { name: 'Display Name', isChild: bool }
