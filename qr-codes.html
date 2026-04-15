@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Codes — Hochzeitseinladungen</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.2/qrcode.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f5f5f5;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .subtitle {
+      text-align: center;
+      color: #888;
+      margin-bottom: 32px;
+      font-size: 0.9rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px 16px 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .card canvas {
+      display: block;
+      margin: 0 auto 12px;
+    }
+    .card .inv-id {
+      font-size: 0.7rem;
+      color: #bbb;
+      margin-bottom: 4px;
+      font-family: monospace;
+    }
+    .card .names {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #3D5044;
+      margin-bottom: 4px;
+    }
+    .card .url {
+      font-size: 0.65rem;
+      color: #aaa;
+      word-break: break-all;
+    }
+    @media print {
+      body { background: white; padding: 10px; }
+      h1, .subtitle { margin-bottom: 16px; }
+      .grid { gap: 16px; grid-template-columns: repeat(4, 1fr); }
+      .card { box-shadow: none; border: 1px solid #eee; padding: 16px 12px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>QR Codes — Hochzeitseinladungen</h1>
+  <p class="subtitle">maximiliane-und-stefan.vercel.app</p>
+  <div class="grid" id="grid"></div>
+
+  <script>
+    const BASE_URL = 'https://maximiliane-und-stefan.vercel.app';
+
+    const GUESTS = {
+      'd3d8ce': { name: 'Sigrid Mittermair' },
+      '0ddfcc': { name: 'Tom Mittermair' },
+      '6ed919': { name: 'Vicky Mittermair' },
+      '2088fd': { name: 'Ursula Trommeter' },
+      'c4d392': { name: 'Anke Höll' },
+      '28a915': { name: 'Christian Höll' },
+      'cbb686': { name: 'Julia Höll' },
+      '496710': { name: 'Oscar Franz' },
+      '78a5ba': { name: 'Niklas v. Freeden' },
+      '85f25c': { name: 'Julia v. Freeden' },
+      '269280': { name: 'Constanze Tangemann' },
+      '3a51f5': { name: 'Jakob Tangemann' },
+      'a3c7e1': { name: 'Hauke Tangemann', isChild: true },
+      'b4d8f2': { name: 'Jost Tangemann', isChild: true },
+      '40f39b': { name: 'Henning v. Freeden' },
+      '50a46d': { name: 'Terre' },
+      '8841e7': { name: 'Marlene Mikyska' },
+      '310309': { name: 'Veit Mikyska' },
+      '714aa5': { name: 'Christoph Mikyska' },
+      '0716c6': { name: 'Jenny Mikyska' },
+      'c5e9a3': { name: 'Christoph Mikyska (Kind)', isChild: true },
+      'd6f0b4': { name: 'Jenny Mikyska (Kind)', isChild: true },
+      'f5e5ed': { name: 'Constanze Heinze' },
+      'd259c7': { name: 'Nic Heinze' },
+      'e7a1c5': { name: 'Julius Heinze', isChild: true },
+      'f8b2d6': { name: 'Flori Heinze', isChild: true },
+      'a9c3e7': { name: 'Konstantin Heinze', isChild: true },
+      '7e6f87': { name: 'Michaela Quinn' },
+      '508019': { name: 'Jack Quinn' },
+      '43f75d': { name: 'Erin Quinn' },
+      'fd7fdb': { name: 'Ariana Quinn' },
+      '2597c3': { name: 'Alex Quinn' },
+      'b5839e': { name: 'Lisa Hörter' },
+      '5297fa': { name: 'Gerhard Hörter' },
+      'b65083': { name: 'Fred Mittermair' },
+      '68dc25': { name: 'Christine Mittermair' },
+      'b5f7e2': { name: 'Teresa Mittermair' },
+      '19938b': { name: 'Marcel Kettenbach' },
+      'c8ce07': { name: 'Lavinia Hofmann' },
+      '0df44b': { name: 'Emma Danner' },
+      '185c8b': { name: 'Flo Danner' },
+      'f44e3d': { name: 'Julian Blass' },
+      'ae1832': { name: 'Stephi Brandl' },
+      '232b9e': { name: 'Marlon Bucciarelli' },
+      '720819': { name: 'Philipp Vogl' },
+      '34a146': { name: 'Matze Lechner' },
+      'c61366': { name: 'Franzi Leicher' },
+      '9d3e47': { name: 'Flo Hasreiter' },
+      'bb5c71': { name: 'Kathi Danner' },
+      'f2c14c': { name: 'Milian Danner' },
+      '637baf': { name: 'Patrick Drexler' },
+      'c477d1': { name: 'Wolfgang Seibert' },
+      'a43ccb': { name: 'Mike Jost' },
+      '7ac8ce': { name: 'Sophie Jost' },
+      '9d4441': { name: 'Ina' },
+      'c5f304': { name: 'Nils' },
+      '234452': { name: 'Julia' },
+      '689ec2': { name: 'Manuel' },
+      'f09930': { name: 'Franzi Riederle' },
+      '5cfeb0': { name: 'Ahsan Riederle' },
+      '506400': { name: 'Manu Gierschewski' },
+      '620b80': { name: 'Lena Gierschewski' },
+      '8f04cc': { name: 'Eli Jahl' },
+      '4b2f2c': { name: 'Maxi Jahl' },
+      '282db7': { name: 'Janine Röttgerkamp' },
+      'a7f748': { name: 'Javier Röttgerkamp' },
+      '65a80c': { name: 'Helena Smolak' },
+      'da099d': { name: 'Christoph Feldmann' },
+      '4aff26': { name: 'David Natzkin' },
+      '89eb5d': { name: 'Steffi Hain' },
+      '12ef9d': { name: 'Fabi Filbig' },
+      '08734e': { name: 'Melli' },
+      'c53bfc': { name: 'Henni Leicher' },
+      '99779b': { name: 'Daniel Gaedke' },
+      'b0d4f8': { name: 'Julia Gaedke' },
+      '5f06f3': { name: 'Fritz Nitschke' },
+      'c45559': { name: 'Margit Nitschke' },
+      'e5e0dc': { name: 'Matthias Helfrich' },
+      'b25ff1': { name: 'Evelyn' },
+      'f1cd31': { name: 'Kevin' },
+      '2da664': { name: 'Maxi Bonauer' },
+      '0a940f': { name: 'Robin Balabaner' },
+      '6f346a': { name: 'Lino Pineda' },
+      '25eba9': { name: 'Philipp Hahnebüte' },
+      'e3e199': { name: 'Nathalie Franz' },
+      '2e8057': { name: 'Joachim Franz' },
+    };
+
+    const INVITATIONS = {
+      '1':  ['d3d8ce', '0ddfcc'],
+      '2':  ['6ed919'],
+      '3':  ['2088fd'],
+      '4':  ['c4d392', '28a915'],
+      '5':  ['cbb686', '496710'],
+      '6':  ['78a5ba', '85f25c'],
+      '7':  ['269280', '3a51f5', 'a3c7e1', 'b4d8f2'],
+      '8':  ['40f39b', '50a46d'],
+      '9':  ['8841e7', '310309'],
+      '10': ['714aa5', '0716c6', 'c5e9a3', 'd6f0b4'],
+      '11': ['f5e5ed', 'd259c7', 'e7a1c5', 'f8b2d6', 'a9c3e7'],
+      '12': ['7e6f87', '508019'],
+      '13': ['43f75d'],
+      '14': ['fd7fdb', '2597c3'],
+      '15': ['b5839e', '5297fa'],
+      '16': ['b65083', '68dc25', 'b5f7e2'],
+      '17': ['19938b', 'c8ce07'],
+      '18': ['0df44b', '185c8b'],
+      '19': ['f44e3d', 'ae1832'],
+      '20': ['232b9e'],
+      '21': ['720819'],
+      '22': ['34a146'],
+      '23': ['c61366', '9d3e47'],
+      '24': ['bb5c71', 'f2c14c'],
+      '25': ['637baf'],
+      '26': ['c477d1'],
+      '27': ['a43ccb', '7ac8ce'],
+      '28': ['9d4441', 'c5f304'],
+      '29': ['234452', '689ec2'],
+      '30': ['f09930', '5cfeb0'],
+      '31': ['506400', '620b80'],
+      '32': ['8f04cc', '4b2f2c'],
+      '33': ['282db7', 'a7f748'],
+      '34': ['65a80c'],
+      '35': ['da099d'],
+      '36': ['4aff26', '89eb5d'],
+      '37': ['12ef9d', '08734e'],
+      '38': ['c53bfc'],
+      '39': ['99779b', 'b0d4f8'],
+      '40': ['5f06f3', 'c45559'],
+      '41': ['e5e0dc', 'b25ff1'],
+      '42': ['f1cd31'],
+      '43': ['2da664'],
+      '44': ['0a940f'],
+      '45': ['6f346a'],
+      '46': ['25eba9'],
+      '47': ['e3e199', '2e8057'],
+    };
+
+    function getFirstName(name) {
+      return name.replace(/\s*\(.*\)/, '').split(' ')[0];
+    }
+
+    const grid = document.getElementById('grid');
+
+    Object.entries(INVITATIONS).forEach(([id, guestIds]) => {
+      const names = guestIds.map(gid => getFirstName(GUESTS[gid].name));
+      const label = names.length === 1
+        ? names[0]
+        : names.slice(0, -1).join(', ') + ' & ' + names[names.length - 1];
+
+      const url = `${BASE_URL}/?i=${id}`;
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="inv-id">#${id}</div>
+        <div id="qr-${id}" style="display:inline-block"></div>
+        <div class="names">${label}</div>
+        <div class="url">${url}</div>
+      `;
+      grid.appendChild(card);
+
+      new QRCode(document.getElementById(`qr-${id}`), {
+        text: url,
+        width: 160,
+        height: 160,
+        colorDark: '#3D5044',
+        colorLight: '#FFFFFF',
+        correctLevel: QRCode.CorrectLevel.M,
+      });
+    });
+  </script>
+</body>
+</html>

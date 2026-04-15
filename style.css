@@ -462,6 +462,62 @@ em {
   margin: 48px 16px;
 }
 
+/* --- PERSON SELECTOR --- */
+.person-selector {
+  margin-bottom: 32px;
+}
+
+.person-selector.hidden { display: none; }
+
+.person-selector-label {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.person-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.person-btn {
+  padding: 10px 20px;
+  border: 2px solid var(--green);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--green);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.person-btn:hover {
+  background: var(--green-light);
+}
+
+.person-btn.active {
+  background: var(--green);
+  color: var(--white);
+}
+
+.person-btn.done {
+  border-style: dashed;
+  opacity: 0.55;
+}
+
+.person-btn.done::after {
+  content: ' \2713';
+}
+
+.person-btn.done.active {
+  opacity: 0.75;
+}
+
 /* --- RSVP FORM --- */
 .form-group {
   margin-bottom: 28px;
