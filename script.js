@@ -239,6 +239,12 @@ if (inviteGuests.length > 0) {
   const dot = document.createTextNode('.');
   intro.append(hallo, nameEl, rest, deadline, dot);
 
+  // Personalize the "Wir sagen ja" section label with the invitee names
+  const hochzeitLabel = document.getElementById('hochzeit-label');
+  if (hochzeitLabel) hochzeitLabel.textContent = 'Liebe ' + greetingNames;
+  const hochzeitSub = document.getElementById('hochzeit-sub');
+  if (hochzeitSub) hochzeitSub.textContent = 'wir freuen uns, diesen Tag mit euch zu feiern.';
+
   // Hide the generic "fill out separately" note — the person selector makes it obvious
   const rsvpNote = document.querySelector('.rsvp-note');
   if (rsvpNote) rsvpNote.style.display = 'none';
