@@ -382,6 +382,17 @@ em {
   margin-bottom: 12px;
 }
 
+.section-label.personalized {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
 .section-label-light { color: var(--gold-light); }
 
 .section-inner h2 { margin-bottom: 16px; }
@@ -926,8 +937,8 @@ footer {
 
 .wir-sagen-ja {
   font-family: var(--font-sans);
-  font-size: clamp(1.6rem, 4vw, 2.8rem);
-  letter-spacing: 0.25em;
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 16px;

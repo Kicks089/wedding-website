@@ -241,7 +241,10 @@ if (inviteGuests.length > 0) {
 
   // Personalize the "Wir sagen ja" section label with the invitee names
   const hochzeitLabel = document.getElementById('hochzeit-label');
-  if (hochzeitLabel) hochzeitLabel.textContent = 'Liebe ' + greetingNames;
+  if (hochzeitLabel) {
+    hochzeitLabel.textContent = 'Liebe ' + greetingNames + ',';
+    hochzeitLabel.classList.add('personalized');
+  }
   const hochzeitSub = document.getElementById('hochzeit-sub');
   if (hochzeitSub) hochzeitSub.textContent = 'wir freuen uns, diesen Tag mit euch zu feiern.';
 
