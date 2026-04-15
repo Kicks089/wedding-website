@@ -40,9 +40,12 @@
       page-break-inside: avoid;
       break-inside: avoid;
     }
-    .card canvas {
-      display: block;
+    .card .qr-wrap {
+      display: inline-block;
       margin: 0 auto 12px;
+    }
+    .card canvas, .card .qr-wrap img {
+      display: block;
     }
     .card .inv-id {
       font-size: 0.7rem;
@@ -62,10 +65,33 @@
       word-break: break-all;
     }
     @media print {
-      body { background: white; padding: 10px; }
-      h1, .subtitle { margin-bottom: 16px; }
-      .grid { gap: 16px; grid-template-columns: repeat(4, 1fr); }
-      .card { box-shadow: none; border: 1px solid #eee; padding: 16px 12px 14px; }
+      @page { margin: 10mm; }
+      body { background: white; padding: 0; }
+      h1, .subtitle { margin-bottom: 10mm; }
+      .grid {
+        gap: 8mm 6mm;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+      }
+      /* Force each QR to exactly 40mm x 40mm */
+      .card .qr-wrap {
+        width: 40mm;
+        height: 40mm;
+        margin: 0 auto 2mm;
+      }
+      .card .qr-wrap img,
+      .card .qr-wrap canvas {
+        width: 40mm !important;
+        height: 40mm !important;
+        display: block;
+      }
+      .card .inv-id { font-size: 8pt; margin-bottom: 1mm; }
+      .card .names { font-size: 10pt; margin-bottom: 1mm; }
+      .card .url { font-size: 6.5pt; }
     }
   </style>
 </head>
@@ -234,7 +260,7 @@
       card.className = 'card';
       card.innerHTML = `
         <div class="inv-id">#${id}</div>
-        <div id="qr-${id}" style="display:inline-block"></div>
+        <div class="qr-wrap"><div id="qr-${id}"></div></div>
         <div class="names">${label}</div>
         <div class="url">${url}</div>
       `;
