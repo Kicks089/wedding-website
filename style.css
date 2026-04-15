@@ -94,11 +94,11 @@ em {
 .nav-monogram {
   font-family: var(--font-serif);
   font-size: 1.3rem;
-  color: var(--gold-light);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.1em;
 }
 
-.nav-amp { color: var(--gold); font-style: italic; }
+.nav-amp { color: rgba(255, 255, 255, 0.5); font-style: italic; }
 
 .nav-links {
   display: flex;
@@ -899,9 +899,10 @@ footer {
   text-align: center;
   margin-bottom: 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0;
+  justify-content: center;
+  gap: 14px;
   line-height: 1;
 }
 
@@ -914,13 +915,13 @@ footer {
   display: block;
 }
 
-.wsj-curve {
+.wsj-amp {
+  font-family: var(--font-script);
+  font-size: 2.6rem;
+  color: var(--text-muted);
+  opacity: 0.45;
+  line-height: 1;
   display: block;
-  width: 24px;
-  height: 20px;
-  border-left: 1.5px solid rgba(90,114,96,0.35);
-  border-radius: 0 0 0 12px;
-  margin: 2px auto;
 }
 
 .wir-sagen-ja {
