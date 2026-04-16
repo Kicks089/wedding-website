@@ -103,7 +103,9 @@ const GUESTS = {
   '2e8057': { name: 'Joachim Franz' },
 };
 
-// Invitations — one per card/QR code, maps to guest IDs
+// Invitations — one per card/QR code, maps to guest IDs.
+// IMPORTANT: Numbers 1-47 must never change (QR codes reference them).
+// New invitations are appended at the end (48+).
 const INVITATIONS = {
   '1':  ['d3d8ce', '0ddfcc'],                                     // Sigrid & Thomas Mittermair
   '2':  ['6ed919'],                                                // Victoria Mittermair
@@ -121,38 +123,38 @@ const INVITATIONS = {
   '14': ['fd7fdb', '2597c3'],                                     // Ariana Quinn & Alexander Berchtold
   '15': ['b5839e', '5297fa'],                                     // Elisabeth & Gerhard Hörter
   '16': ['68dc25', 'b65083'],                                     // Christine & Fred Mittermair
-  '17': ['b5f7e2'],                                                // Teresa Mittermair
-  '18': ['c8ce07', '19938b'],                                     // Lavinia Hofmann & Marcel Kettenbach
-  '19': ['0df44b', '185c8b'],                                     // Emma & Florian Danner
-  '20': ['ae1832', 'f44e3d'],                                     // Stephanie Bründl & Julian Blass
-  '21': ['232b9e'],                                                // Marlon Bucciarelli
-  '22': ['720819'],                                                // Philipp Vogl
-  '23': ['34a146'],                                                // Matthias Lechner
-  '24': ['c61366', '9d3e47'],                                     // Franziska Leicher & Florian Hasreiter
-  '25': ['bb5c71', 'f2c14c'],                                     // Katharina Danner & Maximilian Wutz
-  '26': ['637baf'],                                                // Patrick Drexler
-  '27': ['c477d1'],                                                // Wolfgang Seibert
-  '28': ['7ac8ce', 'a43ccb'],                                     // Sophie & Mike Jost
-  '29': ['9d4441', 'c5f304', '5d8e12'],                           // Ina & Nils Gählert + Liv
-  '30': ['234452', '689ec2', '9f4a7c'],                           // Julia & Manuel Häusermann + Paul
-  '31': ['f09930', '5cfeb0', '7b3d51'],                           // Franziska Riederle & Ahsan Saeed + Ariana
-  '32': ['506400', '620b80'],                                     // Manuel & Magdalena Gierszewski
-  '33': ['8f04cc', '4b2f2c'],                                     // Elisabeth Jahl & Maximilian Mair
-  '34': ['282db7', 'a7f748'],                                     // Janine Röttgerkamp & Javier
-  '35': ['65a80c'],                                                // Helena Smolak
-  '36': ['da099d'],                                                // Christoph Feldmann
-  '37': ['89eb5d', '4aff26'],                                     // Stefanie Hain & David Natzkin
-  '38': ['08734e', '12ef9d'],                                     // Melanie & Fabian Filbig
-  '39': ['c53bfc'],                                                // Henriette Leicher
-  '40': ['99779b'],                                                // Daniel Gaedke
-  '41': ['5f06f3', 'c45559'],                                     // Fritz & Margit Nitschke
-  '42': ['e5e0dc', 'b25ff1'],                                     // Matthias Helfrich & Evelyn
-  '43': ['f1cd31'],                                                // Kevin Müller
-  '44': ['2da664'],                                                // Maximilian Bonauer
-  '45': ['0a940f'],                                                // Robin Balabaner
-  '46': ['6f346a'],                                                // Lino Pineda
-  '47': ['25eba9'],                                                // Philipp Hahnebüte
-  '48': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
+  '17': ['c8ce07', '19938b'],                                     // Lavinia Hofmann & Marcel Kettenbach
+  '18': ['0df44b', '185c8b'],                                     // Emma & Florian Danner
+  '19': ['ae1832', 'f44e3d'],                                     // Stephanie Bründl & Julian Blass
+  '20': ['232b9e'],                                                // Marlon Bucciarelli
+  '21': ['720819'],                                                // Philipp Vogl
+  '22': ['34a146'],                                                // Matthias Lechner
+  '23': ['c61366', '9d3e47'],                                     // Franziska Leicher & Florian Hasreiter
+  '24': ['bb5c71', 'f2c14c'],                                     // Katharina Danner & Maximilian Wutz
+  '25': ['637baf'],                                                // Patrick Drexler
+  '26': ['c477d1'],                                                // Wolfgang Seibert
+  '27': ['7ac8ce', 'a43ccb'],                                     // Sophie & Mike Jost
+  '28': ['9d4441', 'c5f304', '5d8e12'],                           // Ina & Nils Gählert + Liv
+  '29': ['234452', '689ec2', '9f4a7c'],                           // Julia & Manuel Häusermann + Paul
+  '30': ['f09930', '5cfeb0', '7b3d51'],                           // Franziska Riederle & Ahsan Saeed + Ariana
+  '31': ['506400', '620b80'],                                     // Manuel & Magdalena Gierszewski
+  '32': ['8f04cc', '4b2f2c'],                                     // Elisabeth Jahl & Maximilian Mair
+  '33': ['282db7', 'a7f748'],                                     // Janine Röttgerkamp & Javier
+  '34': ['65a80c'],                                                // Helena Smolak
+  '35': ['da099d'],                                                // Christoph Feldmann
+  '36': ['89eb5d', '4aff26'],                                     // Stefanie Hain & David Natzkin
+  '37': ['08734e', '12ef9d'],                                     // Melanie & Fabian Filbig
+  '38': ['c53bfc'],                                                // Henriette Leicher
+  '39': ['99779b'],                                                // Daniel Gaedke (Julia removed)
+  '40': ['5f06f3', 'c45559'],                                     // Fritz & Margit Nitschke
+  '41': ['e5e0dc', 'b25ff1'],                                     // Matthias Helfrich & Evelyn
+  '42': ['f1cd31'],                                                // Kevin Müller
+  '43': ['2da664'],                                                // Maximilian Bonauer
+  '44': ['0a940f'],                                                // Robin Balabaner
+  '45': ['6f346a'],                                                // Lino Pineda
+  '46': ['25eba9'],                                                // Philipp Hahnebüte
+  '47': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
+  '48': ['b5f7e2'],                                                // Teresa Mittermair (split from original INV 16)
 };
 
 // Local images for gallery — leave empty until after the wedding
