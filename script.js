@@ -13,38 +13,39 @@ const DRIVE_LINK = 'https://drive.google.com/drive/folders/1X3-NXojSglKrisRteMv7
 // Format: 'uniqueId': { name: 'Display Name', isChild: bool }
 const GUESTS = {
   'd3d8ce': { name: 'Sigrid Mittermair' },
-  '0ddfcc': { name: 'Tom Mittermair' },
-  '6ed919': { name: 'Vicky Mittermair' },
+  '0ddfcc': { name: 'Thomas Mittermair' },
+  '6ed919': { name: 'Victoria Mittermair' },
   '2088fd': { name: 'Ursula Trommeter' },
+  'a2c9b4': { name: 'Adolf Trommeter' },
   'c4d392': { name: 'Anke Höll' },
   '28a915': { name: 'Christian Höll' },
   'cbb686': { name: 'Julia Höll' },
   '496710': { name: 'Oscar Franz' },
-  '78a5ba': { name: 'Niklas v. Freeden' },
-  '85f25c': { name: 'Julia v. Freeden' },
+  '78a5ba': { name: 'Niklas von Freeden' },
+  '85f25c': { name: 'Julia von Freeden' },
   '269280': { name: 'Constanze Tangemann' },
   '3a51f5': { name: 'Jakob Tangemann' },
   'a3c7e1': { name: 'Hauke Tangemann', isChild: true },
-  'b4d8f2': { name: 'Jost Tangemann', isChild: true },
-  '40f39b': { name: 'Henning v. Freeden' },
-  '50a46d': { name: 'Terre' },
+  'b4d8f2': { name: 'Joost Tangemann', isChild: true },
+  '40f39b': { name: 'Henning von Freeden' },
+  '50a46d': { name: 'Teresa León Dominguez' },
   '8841e7': { name: 'Marlene Mikyska' },
   '310309': { name: 'Veit Mikyska' },
   '714aa5': { name: 'Christoph Mikyska' },
-  '0716c6': { name: 'Jenny Mikyska' },
-  'c5e9a3': { name: 'Christoph Mikyska (Kind)', isChild: true },
-  'd6f0b4': { name: 'Jenny Mikyska (Kind)', isChild: true },
+  '0716c6': { name: 'Jenny' },
+  'c5e9a3': { name: 'Philippa Mikyska', isChild: true },
+  'd6f0b4': { name: 'Carl Mikyska', isChild: true },
   'f5e5ed': { name: 'Constanze Heinze' },
-  'd259c7': { name: 'Nic Heinze' },
+  'd259c7': { name: 'Nicolas Heinze' },
   'e7a1c5': { name: 'Julius Heinze', isChild: true },
   'f8b2d6': { name: 'Flori Heinze', isChild: true },
-  'a9c3e7': { name: 'Konstantin Heinze', isChild: true },
+  'a9c3e7': { name: 'Constantin Heinze', isChild: true },
   '7e6f87': { name: 'Michaela Quinn' },
   '508019': { name: 'Jack Quinn' },
   '43f75d': { name: 'Erin Quinn' },
   'fd7fdb': { name: 'Ariana Quinn' },
-  '2597c3': { name: 'Alex Quinn' },
-  'b5839e': { name: 'Lisa Hörter' },
+  '2597c3': { name: 'Alexander Berchtold' },
+  'b5839e': { name: 'Elisabeth Hörter' },
   '5297fa': { name: 'Gerhard Hörter' },
   'b65083': { name: 'Fred Mittermair' },
   '68dc25': { name: 'Christine Mittermair' },
@@ -52,47 +53,49 @@ const GUESTS = {
   '19938b': { name: 'Marcel Kettenbach' },
   'c8ce07': { name: 'Lavinia Hofmann' },
   '0df44b': { name: 'Emma Danner' },
-  '185c8b': { name: 'Flo Danner' },
+  '185c8b': { name: 'Florian Danner' },
   'f44e3d': { name: 'Julian Blass' },
-  'ae1832': { name: 'Stephi Brandl' },
+  'ae1832': { name: 'Stephanie Bründl' },
   '232b9e': { name: 'Marlon Bucciarelli' },
   '720819': { name: 'Philipp Vogl' },
-  '34a146': { name: 'Matze Lechner' },
-  'c61366': { name: 'Franzi Leicher' },
-  '9d3e47': { name: 'Flo Hasreiter' },
-  'bb5c71': { name: 'Kathi Danner' },
-  'f2c14c': { name: 'Milian Danner' },
+  '34a146': { name: 'Matthias Lechner' },
+  'c61366': { name: 'Franziska Leicher' },
+  '9d3e47': { name: 'Florian Hasreiter' },
+  'bb5c71': { name: 'Katharina Danner' },
+  'f2c14c': { name: 'Maximilian Wutz' },
   '637baf': { name: 'Patrick Drexler' },
   'c477d1': { name: 'Wolfgang Seibert' },
   'a43ccb': { name: 'Mike Jost' },
   '7ac8ce': { name: 'Sophie Jost' },
-  '9d4441': { name: 'Ina' },
-  'c5f304': { name: 'Nils' },
-  '234452': { name: 'Julia' },
-  '689ec2': { name: 'Manuel' },
-  'f09930': { name: 'Franzi Riederle' },
-  '5cfeb0': { name: 'Ahsan Riederle' },
-  '506400': { name: 'Manu Gierschewski' },
-  '620b80': { name: 'Lena Gierschewski' },
-  '8f04cc': { name: 'Eli Jahl' },
-  '4b2f2c': { name: 'Maxi Jahl' },
+  '9d4441': { name: 'Ina Gählert' },
+  'c5f304': { name: 'Nils Gählert' },
+  '5d8e12': { name: 'Liv Gählert', isChild: true },
+  '234452': { name: 'Julia Häusermann' },
+  '689ec2': { name: 'Manuel Häusermann' },
+  '9f4a7c': { name: 'Paul Häusermann', isChild: true },
+  'f09930': { name: 'Franziska Riederle' },
+  '5cfeb0': { name: 'Ahsan Saeed' },
+  '7b3d51': { name: 'Ariana Saeed', isChild: true },
+  '506400': { name: 'Manuel Gierszewski' },
+  '620b80': { name: 'Magdalena Gierszewski' },
+  '8f04cc': { name: 'Elisabeth Jahl' },
+  '4b2f2c': { name: 'Maximilian Mair' },
   '282db7': { name: 'Janine Röttgerkamp' },
-  'a7f748': { name: 'Javier Röttgerkamp' },
+  'a7f748': { name: 'Javier' },
   '65a80c': { name: 'Helena Smolak' },
   'da099d': { name: 'Christoph Feldmann' },
   '4aff26': { name: 'David Natzkin' },
-  '89eb5d': { name: 'Steffi Hain' },
-  '12ef9d': { name: 'Fabi Filbig' },
-  '08734e': { name: 'Melli' },
-  'c53bfc': { name: 'Henni Leicher' },
+  '89eb5d': { name: 'Stefanie Hain' },
+  '12ef9d': { name: 'Fabian Filbig' },
+  '08734e': { name: 'Melanie' },
+  'c53bfc': { name: 'Henriette Leicher' },
   '99779b': { name: 'Daniel Gaedke' },
-  'b0d4f8': { name: 'Julia Gaedke' },
   '5f06f3': { name: 'Fritz Nitschke' },
   'c45559': { name: 'Margit Nitschke' },
   'e5e0dc': { name: 'Matthias Helfrich' },
-  'b25ff1': { name: 'Evelyn' },
-  'f1cd31': { name: 'Kevin' },
-  '2da664': { name: 'Maxi Bonauer' },
+  'b25ff1': { name: 'Evelyn (Matthias)' },
+  'f1cd31': { name: 'Kevin Müller' },
+  '2da664': { name: 'Maximilian Bonauer' },
   '0a940f': { name: 'Robin Balabaner' },
   '6f346a': { name: 'Lino Pineda' },
   '25eba9': { name: 'Philipp Hahnebüte' },
@@ -102,53 +105,54 @@ const GUESTS = {
 
 // Invitations — one per card/QR code, maps to guest IDs
 const INVITATIONS = {
-  '1':  ['d3d8ce', '0ddfcc'],                                     // Sigrid & Tom Mittermair
-  '2':  ['6ed919'],                                                // Vicky Mittermair
-  '3':  ['2088fd'],                                                // Ursula Trommeter
+  '1':  ['d3d8ce', '0ddfcc'],                                     // Sigrid & Thomas Mittermair
+  '2':  ['6ed919'],                                                // Victoria Mittermair
+  '3':  ['2088fd', 'a2c9b4'],                                     // Ursula & Adolf Trommeter
   '4':  ['c4d392', '28a915'],                                     // Anke & Christian Höll
   '5':  ['cbb686', '496710'],                                     // Julia Höll & Oscar Franz
-  '6':  ['78a5ba', '85f25c'],                                     // Niklas & Julia v. Freeden
-  '7':  ['269280', '3a51f5', 'a3c7e1', 'b4d8f2'],                // Tangemann Familie
-  '8':  ['40f39b', '50a46d'],                                     // Henning v. Freeden & Terre
+  '6':  ['78a5ba', '85f25c'],                                     // Niklas & Julia von Freeden
+  '7':  ['269280', '3a51f5', 'b4d8f2', 'a3c7e1'],                // Tangemann Familie
+  '8':  ['40f39b', '50a46d'],                                     // Henning von Freeden & Teresa León Dominguez
   '9':  ['8841e7', '310309'],                                     // Marlene & Veit Mikyska
-  '10': ['714aa5', '0716c6', 'c5e9a3', 'd6f0b4'],                // Christoph & Jenny Mikyska + Kinder
+  '10': ['0716c6', '714aa5', 'c5e9a3', 'd6f0b4'],                // Jenny & Christoph Mikyska + Philippa & Carl
   '11': ['f5e5ed', 'd259c7', 'e7a1c5', 'f8b2d6', 'a9c3e7'],     // Heinze Familie
   '12': ['7e6f87', '508019'],                                     // Michaela & Jack Quinn
   '13': ['43f75d'],                                                // Erin Quinn
-  '14': ['fd7fdb', '2597c3'],                                     // Ariana & Alex Quinn
-  '15': ['b5839e', '5297fa'],                                     // Lisa & Gerhard Hörter
-  '16': ['b65083', '68dc25', 'b5f7e2'],                           // Fred, Christine & Teresa Mittermair
-  '17': ['19938b', 'c8ce07'],                                     // Marcel Kettenbach & Lavinia Hofmann
-  '18': ['0df44b', '185c8b'],                                     // Emma & Flo Danner
-  '19': ['f44e3d', 'ae1832'],                                     // Julian Blass & Stephi Brandl
-  '20': ['232b9e'],                                                // Marlon Bucciarelli
-  '21': ['720819'],                                                // Philipp Vogl
-  '22': ['34a146'],                                                // Matze Lechner
-  '23': ['c61366', '9d3e47'],                                     // Franzi Leicher & Flo Hasreiter
-  '24': ['bb5c71', 'f2c14c'],                                     // Kathi & Milian Danner
-  '25': ['637baf'],                                                // Patrick Drexler
-  '26': ['c477d1'],                                                // Wolfgang Seibert
-  '27': ['a43ccb', '7ac8ce'],                                     // Mike & Sophie Jost
-  '28': ['9d4441', 'c5f304'],                                     // Ina & Nils
-  '29': ['234452', '689ec2'],                                     // Julia & Manuel
-  '30': ['f09930', '5cfeb0'],                                     // Franzi & Ahsan Riederle
-  '31': ['506400', '620b80'],                                     // Manu & Lena Gierschewski
-  '32': ['8f04cc', '4b2f2c'],                                     // Eli & Maxi Jahl
-  '33': ['282db7', 'a7f748'],                                     // Janine & Javier Röttgerkamp
-  '34': ['65a80c'],                                                // Helena Smolak
-  '35': ['da099d'],                                                // Christoph Feldmann
-  '36': ['4aff26', '89eb5d'],                                     // David Natzkin & Steffi Hain
-  '37': ['12ef9d', '08734e'],                                     // Fabi Filbig & Melli
-  '38': ['c53bfc'],                                                // Henni Leicher
-  '39': ['99779b', 'b0d4f8'],                                     // Daniel & Julia Gaedke
-  '40': ['5f06f3', 'c45559'],                                     // Fritz & Margit Nitschke
-  '41': ['e5e0dc', 'b25ff1'],                                     // Matthias Helfrich & Evelyn
-  '42': ['f1cd31'],                                                // Kevin
-  '43': ['2da664'],                                                // Maxi Bonauer
-  '44': ['0a940f'],                                                // Robin Balabaner
-  '45': ['6f346a'],                                                // Lino Pineda
-  '46': ['25eba9'],                                                // Philipp Hahnebüte
-  '47': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
+  '14': ['fd7fdb', '2597c3'],                                     // Ariana Quinn & Alexander Berchtold
+  '15': ['b5839e', '5297fa'],                                     // Elisabeth & Gerhard Hörter
+  '16': ['68dc25', 'b65083'],                                     // Christine & Fred Mittermair
+  '17': ['b5f7e2'],                                                // Teresa Mittermair
+  '18': ['c8ce07', '19938b'],                                     // Lavinia Hofmann & Marcel Kettenbach
+  '19': ['0df44b', '185c8b'],                                     // Emma & Florian Danner
+  '20': ['ae1832', 'f44e3d'],                                     // Stephanie Bründl & Julian Blass
+  '21': ['232b9e'],                                                // Marlon Bucciarelli
+  '22': ['720819'],                                                // Philipp Vogl
+  '23': ['34a146'],                                                // Matthias Lechner
+  '24': ['c61366', '9d3e47'],                                     // Franziska Leicher & Florian Hasreiter
+  '25': ['bb5c71', 'f2c14c'],                                     // Katharina Danner & Maximilian Wutz
+  '26': ['637baf'],                                                // Patrick Drexler
+  '27': ['c477d1'],                                                // Wolfgang Seibert
+  '28': ['7ac8ce', 'a43ccb'],                                     // Sophie & Mike Jost
+  '29': ['9d4441', 'c5f304', '5d8e12'],                           // Ina & Nils Gählert + Liv
+  '30': ['234452', '689ec2', '9f4a7c'],                           // Julia & Manuel Häusermann + Paul
+  '31': ['f09930', '5cfeb0', '7b3d51'],                           // Franziska Riederle & Ahsan Saeed + Ariana
+  '32': ['506400', '620b80'],                                     // Manuel & Magdalena Gierszewski
+  '33': ['8f04cc', '4b2f2c'],                                     // Elisabeth Jahl & Maximilian Mair
+  '34': ['282db7', 'a7f748'],                                     // Janine Röttgerkamp & Javier
+  '35': ['65a80c'],                                                // Helena Smolak
+  '36': ['da099d'],                                                // Christoph Feldmann
+  '37': ['89eb5d', '4aff26'],                                     // Stefanie Hain & David Natzkin
+  '38': ['08734e', '12ef9d'],                                     // Melanie & Fabian Filbig
+  '39': ['c53bfc'],                                                // Henriette Leicher
+  '40': ['99779b'],                                                // Daniel Gaedke
+  '41': ['5f06f3', 'c45559'],                                     // Fritz & Margit Nitschke
+  '42': ['e5e0dc', 'b25ff1'],                                     // Matthias Helfrich & Evelyn
+  '43': ['f1cd31'],                                                // Kevin Müller
+  '44': ['2da664'],                                                // Maximilian Bonauer
+  '45': ['0a940f'],                                                // Robin Balabaner
+  '46': ['6f346a'],                                                // Lino Pineda
+  '47': ['25eba9'],                                                // Philipp Hahnebüte
+  '48': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
 };
 
 // Local images for gallery — leave empty until after the wedding
