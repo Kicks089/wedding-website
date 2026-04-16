@@ -229,15 +229,26 @@ if (inviteGuests.length > 0) {
 
   const intro = document.getElementById('rsvp-intro');
   intro.textContent = '';
-  const hallo = document.createElement('span');
-  hallo.textContent = 'Hallo ';
-  const nameEl = document.createElement('strong');
+  intro.classList.add('rsvp-intro-personalized');
+
+  const greeting = document.createElement('span');
+  greeting.className = 'rsvp-greeting';
+  const hallo = document.createTextNode('Hallo ');
+  const nameEl = document.createElement('span');
+  nameEl.className = 'rsvp-guest-name';
   nameEl.textContent = greetingNames;
-  const rest = document.createTextNode('! Wir freuen uns auf eure Rückmeldung bis zum ');
+  const excl = document.createTextNode('!');
+  greeting.append(hallo, nameEl, excl);
+
+  const body = document.createElement('span');
+  body.className = 'rsvp-intro-body';
+  const rest = document.createTextNode('Wir freuen uns auf eure Rückmeldung bis zum ');
   const deadline = document.createElement('strong');
   deadline.textContent = '5. Juni 2026';
   const dot = document.createTextNode('.');
-  intro.append(hallo, nameEl, rest, deadline, dot);
+  body.append(rest, deadline, dot);
+
+  intro.append(greeting, body);
 
   // Personalize the "Wir sagen ja" section label with the invitee names
   const hochzeitLabel = document.getElementById('hochzeit-label');
