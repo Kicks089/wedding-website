@@ -70,9 +70,9 @@ const GUESTS = {
   '9d4441': { name: 'Ina Gählert' },
   'c5f304': { name: 'Nils Gählert' },
   '5d8e12': { name: 'Liv Gählert', isChild: true },
-  '234452': { name: 'Julia Häusermann' },
-  '689ec2': { name: 'Manuel Häusermann' },
-  '9f4a7c': { name: 'Paul Häusermann', isChild: true },
+  '234452': { name: 'Julia Häußermann' },
+  '689ec2': { name: 'Manuel Häußermann' },
+  '9f4a7c': { name: 'Paul Häußermann', isChild: true },
   'f09930': { name: 'Franziska Riederle' },
   '5cfeb0': { name: 'Ahsan Saeed' },
   '7b3d51': { name: 'Ariana Saeed', isChild: true },
@@ -135,7 +135,7 @@ const INVITATIONS = {
   '26': ['c477d1'],                                                // Wolfgang Seibert
   '27': ['7ac8ce', 'a43ccb'],                                     // Sophie & Mike Jost
   '28': ['9d4441', 'c5f304', '5d8e12'],                           // Ina & Nils Gählert + Liv
-  '29': ['234452', '689ec2', '9f4a7c'],                           // Julia & Manuel Häusermann + Paul
+  '29': ['234452', '689ec2', '9f4a7c'],                           // Julia & Manuel Häußermann + Paul
   '30': ['f09930', '5cfeb0', '7b3d51'],                           // Franziska Riederle & Ahsan Saeed + Ariana
   '31': ['506400', '620b80'],                                     // Manuel & Magdalena Gierszewski
   '32': ['8f04cc', '4b2f2c'],                                     // Elisabeth Jahl & Maximilian Mair
