@@ -93,7 +93,7 @@ const GUESTS = {
   '5f06f3': { name: 'Fritz Nitschke' },
   'c45559': { name: 'Margit Nitschke' },
   'e5e0dc': { name: 'Matthias Helfrich' },
-  'b25ff1': { name: 'Evelyn (Matthias)' },
+  'b25ff1': { name: 'Evelyn' },
   'f1cd31': { name: 'Kevin Müller' },
   '2da664': { name: 'Maximilian Bonauer' },
   '0a940f': { name: 'Robin Balabaner' },
