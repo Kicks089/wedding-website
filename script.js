@@ -32,9 +32,10 @@ const GUESTS = {
   '8841e7': { name: 'Marlene Mikyska' },
   '310309': { name: 'Veit Mikyska' },
   '714aa5': { name: 'Christoph Mikyska' },
-  '0716c6': { name: 'Jenny' },
+  '0716c6': { name: 'Jennifer Mikyska' },
   'c5e9a3': { name: 'Philippa Mikyska', isChild: true },
   'd6f0b4': { name: 'Carl Mikyska', isChild: true },
+  'fa3b2e': { name: 'Theodora Mikyska', isChild: true },
   'f5e5ed': { name: 'Constanze Heinze' },
   'd259c7': { name: 'Nicolai Heinze' },
   'e7a1c5': { name: 'Julius Heinze', isChild: true },
@@ -81,7 +82,7 @@ const GUESTS = {
   '8f04cc': { name: 'Elisabeth Jahl' },
   '4b2f2c': { name: 'Maximilian Mair' },
   '282db7': { name: 'Janine Röttgerkamp' },
-  'a7f748': { name: 'Javier' },
+  'a7f748': { name: 'Javier del Rosario Tejads' },
   '65a80c': { name: 'Helena Smolak' },
   'da099d': { name: 'Christoph Feldmann' },
   '4aff26': { name: 'David Natzkin' },
@@ -116,7 +117,7 @@ const INVITATIONS = {
   '7':  ['269280', '3a51f5', 'b4d8f2', 'a3c7e1'],                // Tangemann Familie
   '8':  ['40f39b', '50a46d'],                                     // Henning von Freeden & Teresa León Dominguez
   '9':  ['8841e7', '310309'],                                     // Marlene & Veit Mikyska
-  '10': ['0716c6', '714aa5', 'c5e9a3', 'd6f0b4'],                // Jenny & Christoph Mikyska + Philippa & Carl
+  '10': ['0716c6', '714aa5', 'c5e9a3', 'd6f0b4', 'fa3b2e'],      // Jennifer & Christoph Mikyska + Philippa, Carl & Theodora
   '11': ['f5e5ed', 'd259c7', 'e7a1c5', 'f8b2d6', 'a9c3e7'],     // Heinze Familie
   '12': ['7e6f87', '508019'],                                     // Michaela & Jack Quinn
   '13': ['43f75d'],                                                // Erin Quinn
