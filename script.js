@@ -51,6 +51,7 @@ const GUESTS = {
   'b65083': { name: 'Fred Mittermair' },
   '68dc25': { name: 'Christine Mittermair' },
   'b5f7e2': { name: 'Teresa Mittermair' },
+  'c8a710': { name: 'Anna Mittermair' },
   '19938b': { name: 'Marcel Kettenbach' },
   'c8ce07': { name: 'Lavinia Hofmann' },
   '0df44b': { name: 'Emma Danner' },
@@ -123,7 +124,7 @@ const INVITATIONS = {
   '13': ['43f75d'],                                                // Erin Quinn
   '14': ['fd7fdb', '2597c3'],                                     // Ariana Quinn & Alexander Berchtold
   '15': ['b5839e', '5297fa'],                                     // Elisabeth & Gerhard Hörter
-  '16': ['68dc25', 'b65083'],                                     // Christine & Fred Mittermair
+  '16': ['68dc25', 'b65083', 'c8a710'],                           // Christine, Fred & Anna Mittermair
   '17': ['c8ce07', '19938b'],                                     // Lavinia Hofmann & Marcel Kettenbach
   '18': ['0df44b', '185c8b'],                                     // Emma & Florian Danner
   '19': ['ae1832', 'f44e3d'],                                     // Stephanie Bründl & Julian Blass
