@@ -103,6 +103,8 @@ const GUESTS = {
   '25eba9': { name: 'Philipp Hahnebüte' },
   'e3e199': { name: 'Nathalie Franz' },
   '2e8057': { name: 'Joachim Franz' },
+  'd14b9a': { name: 'Heinz Hempowitz' },
+  'e25cab': { name: 'Christa Hempowitz' },
 };
 
 // Invitations — one per card/QR code, maps to guest IDs.
@@ -157,6 +159,7 @@ const INVITATIONS = {
   '46': ['25eba9'],                                                // Philipp Hahnebüte
   '47': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
   '48': ['b5f7e2'],                                                // Teresa Mittermair (split from original INV 16)
+  '49': ['d14b9a', 'e25cab'],                                     // Heinz & Christa Hempowitz
 };
 
 // Local images for gallery — leave empty until after the wedding
