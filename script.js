@@ -15,6 +15,7 @@ const GUESTS = {
   'd3d8ce': { name: 'Sigrid Mittermair' },
   '0ddfcc': { name: 'Thomas Mittermair' },
   '6ed919': { name: 'Victoria Mittermair' },
+  '8fddef': { name: 'Niklas Wohlmuth' },
   '2088fd': { name: 'Ursula Trommeter' },
   'a2c9b4': { name: 'Adolf Trommeter' },
   'c4d392': { name: 'Anke Höll' },
@@ -59,7 +60,7 @@ const GUESTS = {
   'f44e3d': { name: 'Julian Blass' },
   'ae1832': { name: 'Stephanie Bründl' },
   '232b9e': { name: 'Marlon Bucciarelli' },
-  '720819': { name: 'Philipp Vogl' },
+  '720819': { name: 'Philipp Vogel' },
   '34a146': { name: 'Matthias Lechner' },
   'c61366': { name: 'Franziska Leicher' },
   '9d3e47': { name: 'Florian Hasreiter' },
@@ -112,7 +113,7 @@ const GUESTS = {
 // New invitations are appended at the end (48+).
 const INVITATIONS = {
   '1':  ['d3d8ce', '0ddfcc'],                                     // Sigrid & Thomas Mittermair
-  '2':  ['6ed919'],                                                // Victoria Mittermair
+  '2':  ['6ed919', '8fddef'],                                      // Victoria Mittermair & Niklas Wohlmuth
   '3':  ['2088fd', 'a2c9b4'],                                     // Ursula & Adolf Trommeter
   '4':  ['c4d392', '28a915'],                                     // Anke & Christian Höll
   '5':  ['cbb686', '496710'],                                     // Julia Höll & Oscar Franz
@@ -131,7 +132,7 @@ const INVITATIONS = {
   '18': ['0df44b', '185c8b'],                                     // Emma & Florian Danner
   '19': ['ae1832', 'f44e3d'],                                     // Stephanie Bründl & Julian Blass
   '20': ['232b9e'],                                                // Marlon Bucciarelli
-  '21': ['720819'],                                                // Philipp Vogl
+  '21': ['720819'],                                                // Philipp Vogel
   '22': ['34a146'],                                                // Matthias Lechner
   '23': ['c61366', '9d3e47'],                                     // Franziska Leicher & Florian Hasreiter
   '24': ['bb5c71', 'f2c14c'],                                     // Katharina Danner & Maximilian Wutz
