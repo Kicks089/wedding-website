@@ -45,6 +45,7 @@ const GUESTS = {
   '7e6f87': { name: 'Michaela Quinn' },
   '508019': { name: 'Jack Quinn' },
   '43f75d': { name: 'Erin Quinn' },
+  '5fbde0': { name: 'James' },
   'fd7fdb': { name: 'Ariana Quinn' },
   '2597c3': { name: 'Alexander Berchtold' },
   'b5839e': { name: 'Elisabeth Hörter' },
@@ -124,7 +125,7 @@ const INVITATIONS = {
   '10': ['0716c6', '714aa5', 'c5e9a3', 'd6f0b4', 'fa3b2e'],      // Jennifer & Christoph Mikyska + Philippa, Carl & Theodora
   '11': ['f5e5ed', 'd259c7', 'e7a1c5', 'f8b2d6', 'a9c3e7'],     // Heinze Familie
   '12': ['7e6f87', '508019'],                                     // Michaela & Jack Quinn
-  '13': ['43f75d'],                                                // Erin Quinn
+  '13': ['43f75d', '5fbde0'],                                      // Erin Quinn & James
   '14': ['fd7fdb', '2597c3'],                                     // Ariana Quinn & Alexander Berchtold
   '15': ['b5839e', '5297fa'],                                     // Elisabeth & Gerhard Hörter
   '16': ['68dc25', 'b65083', 'c8a710'],                           // Christine, Fred & Anna Mittermair
