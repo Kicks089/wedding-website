@@ -37,7 +37,7 @@ const GUESTS = {
   'c5e9a3': { name: 'Philippa Mikyska', isChild: true },
   'd6f0b4': { name: 'Carl Mikyska', isChild: true },
   'fa3b2e': { name: 'Theodora Mikyska', isChild: true },
-  '4ec82c': { name: 'Maxi Schwartz' },
+  '4ec82c': { name: 'Maximilian Schwartz' },
   'f5e5ed': { name: 'Constanze Heinze' },
   'd259c7': { name: 'Nicolai Heinze' },
   'e7a1c5': { name: 'Julius Heinze', isChild: true },
@@ -163,7 +163,7 @@ const INVITATIONS = {
   '47': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
   '48': ['b5f7e2'],                                                // Teresa Mittermair (split from original INV 16)
   '49': ['d14b9a', 'e25cab'],                                     // Heinz & Christa Hempowitz
-  '50': ['4ec82c'],                                                // Maxi Schwartz
+  '50': ['4ec82c'],                                                // Maximilian Schwartz
 };
 
 // Local images for gallery — leave empty until after the wedding
