@@ -33,10 +33,11 @@ const GUESTS = {
   '8841e7': { name: 'Marlene Mikyska' },
   '310309': { name: 'Veit Mikyska' },
   '714aa5': { name: 'Christoph Mikyska' },
-  '0716c6': { name: 'Jennifer Mikyska' },
+  '0716c6': { name: 'Jenny Mikyska' },
   'c5e9a3': { name: 'Philippa Mikyska', isChild: true },
   'd6f0b4': { name: 'Carl Mikyska', isChild: true },
   'fa3b2e': { name: 'Theodora Mikyska', isChild: true },
+  '4ec82c': { name: 'Maxi Schwartz' },
   'f5e5ed': { name: 'Constanze Heinze' },
   'd259c7': { name: 'Nicolai Heinze' },
   'e7a1c5': { name: 'Julius Heinze', isChild: true },
@@ -122,7 +123,7 @@ const INVITATIONS = {
   '7':  ['269280', '3a51f5', 'b4d8f2', 'a3c7e1'],                // Tangemann Familie
   '8':  ['40f39b', '50a46d'],                                     // Henning von Freeden & Teresa León Dominguez
   '9':  ['8841e7', '310309'],                                     // Marlene & Veit Mikyska
-  '10': ['0716c6', '714aa5', 'c5e9a3', 'd6f0b4', 'fa3b2e'],      // Jennifer & Christoph Mikyska + Philippa, Carl & Theodora
+  '10': ['0716c6', '714aa5', 'c5e9a3', 'd6f0b4', 'fa3b2e'],      // Jenny & Christoph Mikyska + Philippa, Carl & Theodora
   '11': ['f5e5ed', 'd259c7', 'e7a1c5', 'f8b2d6', 'a9c3e7'],     // Heinze Familie
   '12': ['7e6f87', '508019'],                                     // Michaela & Jack Quinn
   '13': ['43f75d', '5fbde0'],                                      // Erin Quinn & James
@@ -162,6 +163,7 @@ const INVITATIONS = {
   '47': ['e3e199', '2e8057'],                                     // Nathalie & Joachim Franz
   '48': ['b5f7e2'],                                                // Teresa Mittermair (split from original INV 16)
   '49': ['d14b9a', 'e25cab'],                                     // Heinz & Christa Hempowitz
+  '50': ['4ec82c'],                                                // Maxi Schwartz
 };
 
 // Local images for gallery — leave empty until after the wedding
