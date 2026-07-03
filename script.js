@@ -108,6 +108,12 @@ const GUESTS = {
   '2e8057': { name: 'Joachim Franz' },
   'd14b9a': { name: 'Heinz Hempowitz' },
   'e25cab': { name: 'Christa Hempowitz' },
+  'af571d': { name: 'Alicia Hamann' },
+  'f5cd58': { name: 'Isabel Fooke' },
+  'dd84c3': { name: 'Lioba Hober' },
+  'd4e24a': { name: 'Lina Hübener' },
+  'ae5060': { name: 'Luisa Schneider' },
+  '617d5a': { name: 'Christian Aschauer' },
 };
 
 // Invitations — one per card/QR code, maps to guest IDs.
@@ -164,6 +170,12 @@ const INVITATIONS = {
   '48': ['b5f7e2'],                                                // Teresa Mittermair (split from original INV 16)
   '49': ['d14b9a', 'e25cab'],                                     // Heinz & Christa Hempowitz
   '50': ['4ec82c'],                                                // Maximilian Schwartz
+  '51': ['af571d'],                                                // Alicia Hamann
+  '52': ['f5cd58'],                                                // Isabel Fooke
+  '53': ['dd84c3'],                                                // Lioba Hober
+  '54': ['d4e24a'],                                                // Lina Hübener
+  '55': ['ae5060'],                                                // Luisa Schneider
+  '56': ['617d5a'],                                                // Christian Aschauer
 };
 
 // Local images for gallery — leave empty until after the wedding
