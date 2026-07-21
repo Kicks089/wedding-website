@@ -69,6 +69,7 @@ const GUESTS = {
   'bb5c71': { name: 'Katharina Danner' },
   'f2c14c': { name: 'Maximilian Wutz' },
   '637baf': { name: 'Patrick Drexler' },
+  '1fcc59': { name: 'Melanie' },
   'c477d1': { name: 'Wolfgang Seibert' },
   'a43ccb': { name: 'Mike Jost' },
   '7ac8ce': { name: 'Sophie Jost' },
@@ -88,13 +89,17 @@ const GUESTS = {
   '282db7': { name: 'Janine Röttgerkamp' },
   'a7f748': { name: 'Javier del Rosario Tejads' },
   '65a80c': { name: 'Helena Smolak' },
+  '3e4bbf': { name: 'Selim' },
   'da099d': { name: 'Christoph Feldmann' },
+  'bb42a2': { name: 'Gillian' },
   '4aff26': { name: 'David Natzkin' },
   '89eb5d': { name: 'Stefanie Hain' },
   '12ef9d': { name: 'Fabian Filbig' },
   '08734e': { name: 'Melanie' },
   'c53bfc': { name: 'Henriette Leicher' },
+  '7f5421': { name: 'Basti' },
   '99779b': { name: 'Daniel Gaedke' },
+  '7b7d50': { name: 'Julia' },
   '5f06f3': { name: 'Fritz Nitschke' },
   'c45559': { name: 'Margit Nitschke' },
   'e5e0dc': { name: 'Matthias Helfrich' },
@@ -144,7 +149,7 @@ const INVITATIONS = {
   '22': ['34a146'],                                                // Matthias Lechner
   '23': ['c61366', '9d3e47'],                                     // Franziska Leicher & Florian Hasreiter
   '24': ['bb5c71', 'f2c14c'],                                     // Katharina Danner & Maximilian Wutz
-  '25': ['637baf'],                                                // Patrick Drexler
+  '25': ['637baf', '1fcc59'],                                     // Patrick Drexler & Melanie
   '26': ['c477d1'],                                                // Wolfgang Seibert
   '27': ['7ac8ce', 'a43ccb'],                                     // Sophie & Mike Jost
   '28': ['9d4441', 'c5f304', '5d8e12'],                           // Ina & Nils Gählert + Liv
@@ -153,12 +158,12 @@ const INVITATIONS = {
   '31': ['506400', '620b80'],                                     // Manuel & Magdalena Gierszewski
   '32': ['8f04cc', '4b2f2c'],                                     // Elisabeth Jahl & Maximilian Mair
   '33': ['282db7', 'a7f748'],                                     // Janine Röttgerkamp & Javier
-  '34': ['65a80c'],                                                // Helena Smolak
-  '35': ['da099d'],                                                // Christoph Feldmann
+  '34': ['65a80c', '3e4bbf'],                                     // Helena Smolak & Selim
+  '35': ['da099d', 'bb42a2'],                                     // Christoph Feldmann & Gillian
   '36': ['89eb5d', '4aff26'],                                     // Stefanie Hain & David Natzkin
   '37': ['08734e', '12ef9d'],                                     // Melanie & Fabian Filbig
-  '38': ['c53bfc'],                                                // Henriette Leicher
-  '39': ['99779b'],                                                // Daniel Gaedke (Julia removed)
+  '38': ['c53bfc', '7f5421'],                                     // Henriette Leicher & Basti
+  '39': ['99779b', '7b7d50'],                                     // Daniel Gaedke & Julia
   '40': ['5f06f3', 'c45559'],                                     // Fritz & Margit Nitschke
   '41': ['e5e0dc', 'b25ff1'],                                     // Matthias Helfrich & Evelyn
   '42': ['f1cd31'],                                                // Kevin Müller
